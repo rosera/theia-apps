@@ -27,7 +27,7 @@ RUN adduser --disabled-password --gecos '' theia && \
     chown -R theia:theia /home/go-tools;
 USER theia
 
-ENV GO_VERSION=1.12 \
+ENV GO_VERSION=1.14 \
     GOOS=linux \
     GOARCH=amd64 \
     GOROOT=/home/go \
@@ -53,7 +53,7 @@ RUN curl -fsSL https://storage.googleapis.com/golang/go$GO_VERSION.$GOOS-$GOARCH
     golang.org/x/tools/cmd/goimports \
     github.com/sqs/goreturns \
     winterdrache.de/goformat/goformat \
-    golang.org/x/lint/golint \
+    golang.org/x/lint/golint && \
     github.com/cweill/gotests/... \
     github.com/alecthomas/gometalinter \
     honnef.co/go/tools/... \

@@ -80,7 +80,7 @@ RUN apt-get -y install git sudo
 #LSPs
 
 ##GO
-ENV GO_VERSION 1.11.4
+ENV GO_VERSION 1.14
 ENV GOPATH=/usr/local/go-packages
 ENV GO_ROOT=/usr/local/go
 ENV PATH $PATH:/usr/local/go/bin
@@ -103,7 +103,7 @@ RUN curl -sS https://storage.googleapis.com/golang/go$GO_VERSION.linux-amd64.tar
     go get -u -v github.com/zmb3/gogetdoc && \
     go get -u -v golang.org/x/tools/cmd/goimports && \
     go get -u -v sourcegraph.com/sqs/goreturns && \
-    go get -u -v github.com/golang/lint/golint && \
+    go get -u -v golang.org/x/lint/golint && \
     go get -u -v github.com/cweill/gotests/... && \
     go get -u -v github.com/alecthomas/gometalinter && \
     go get -u -v honnef.co/go/tools/... && \
